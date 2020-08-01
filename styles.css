@@ -1,0 +1,119 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-areas: 'left right';
+    grid-template-columns: 30% 70%;
+}
+
+.resume-left {
+    grid-area: left;
+    background-color: #0A66AD;
+    padding: 3% 3% 3% 5%;
+    color: ivory;
+}
+
+.resume-image {
+    display: block;
+    margin: auto;
+    border-radius: 50%;
+    max-width: 200px;
+    max-height: 200px;
+    width: auto;
+}
+
+.resume-right {
+    grid-area: right;
+    padding: 0 3%;
+}
+
+.left {
+    width: 15%;
+}
+
+.contact-title, .about, .hobbies-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 7% 0 1% 0;
+    width: auto;
+    background: #1B9AFA;
+}
+
+.contact {
+    display: flex;
+    justify-content: center;
+}
+
+.hobbies {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 5% 0 0 0;
+    justify-content: center;
+}
+
+.contact, .resume-about {
+    text-justify: center;
+}
+
+.education-content, .experience, .skills, .references {
+    padding: 3% 0 0 0;
+}
+
+.course, .degree, .contact, .amazon, .sainsburys, .references-details {
+    display: flex;
+    flex-wrap: nowrap;
+    align-content: center;
+}
+
+.references-details>.left, .references-details>.right {
+    width: 50%;
+    text-align: center;
+}
+
+.amazon>.left, .sainsburys>.left {
+    display: inline-flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 15%;
+    margin: 0 3% 0 0;
+}
+
+.sainsburys>.right {
+    margin: 0 10% 0 0;
+}
+
+.name-top-center {
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    .grid-container, .contact {
+        display: inline-block;
+    }
+    .contact {
+        margin: 0%;
+    }
+    .course>.right, .degree>.right {
+        margin: 0 0 0 3%;
+    }
+    .resume-about, .contact.title, .resume-image, .resume-left {
+        text-align: center;
+    }
+    .name {
+        display: none;
+    }
+    .name-top-center {
+        display: block;
+        font-weight: bold;
+    }
+    .left {
+        width: 25%;
+    }
+
+}
