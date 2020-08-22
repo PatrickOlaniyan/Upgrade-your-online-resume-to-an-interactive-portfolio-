@@ -1,119 +1,184 @@
 body {
-    font-family: 'Montserrat', sans-serif;
-    padding: 0;
-    margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  padding: 0;
+  margin: 0;
 }
 
 .grid-container {
-    display: grid;
-    grid-template-areas: 'left right';
-    grid-template-columns: 30% 70%;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: 'left right';
+  -ms-grid-columns: 30% 70%;
+      grid-template-columns: 30% 70%;
 }
 
 .resume-left {
-    grid-area: left;
-    background-color: #0A66AD;
-    padding: 3% 3% 3% 5%;
-    color: ivory;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: left;
+  background-color: #0A66AD;
+  padding: 3% 3% 3% 5%;
+  color: ivory;
 }
 
-.resume-image {
-    display: block;
-    margin: auto;
-    border-radius: 50%;
-    max-width: 200px;
-    max-height: 200px;
-    width: auto;
+.resume-left .resume-left__image {
+  display: block;
+  margin: auto;
+  border-radius: 50%;
+  max-width: 200px;
+  max-height: 200px;
+  width: auto;
+}
+
+.resume-left .resume-left__heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 7% 0 1% 0;
+  width: auto;
+  background: #1B9AFA;
+}
+
+.resume-left .resume-left__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-justify: center;
+}
+
+.resume-left .resume-left__heading--hide {
+  display: none;
+}
+
+.resume-left .resume-left__article {
+  text-justify: center;
+}
+
+.resume-left .resume-left__stack {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5% 0 0 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .resume-right {
-    grid-area: right;
-    padding: 0 3%;
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: right;
+  padding: 0 3%;
 }
 
-.left {
-    width: 15%;
+.resume-right .education__article {
+  padding: 3% 0 0 0;
 }
 
-.contact-title, .about, .hobbies-title {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 7% 0 1% 0;
-    width: auto;
-    background: #1B9AFA;
+.resume-right .education__article .education__article--flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -ms-flex-line-pack: center;
+      align-content: center;
 }
 
-.contact {
-    display: flex;
-    justify-content: center;
+.resume-right .education__article .education__article--flex .education__article--width {
+  width: 15%;
 }
 
-.hobbies {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 5% 0 0 0;
-    justify-content: center;
+.resume-right .experience__article {
+  padding: 3% 0 0 0;
 }
 
-.contact, .resume-about {
-    text-justify: center;
+.resume-right .experience__article .experience__article--flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -ms-flex-line-pack: center;
+      align-content: center;
 }
 
-.education-content, .experience, .skills, .references {
-    padding: 3% 0 0 0;
+.resume-right .experience__article .experience__article--flex .experience__article--inline {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 15%;
+  margin: 0 3% 0 0;
 }
 
-.course, .degree, .contact, .amazon, .sainsburys, .references-details {
-    display: flex;
-    flex-wrap: nowrap;
-    align-content: center;
+.resume-right .skills__article {
+  padding: 3% 0 0 0;
 }
 
-.references-details>.left, .references-details>.right {
-    width: 50%;
+.resume-right .references__article {
+  padding: 3% 0 0 0;
+}
+
+.resume-right .references__article .references__article--flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.resume-right .references__article .references__article--flex .references__article--width {
+  width: 50%;
+  text-align: center;
+}
+
+@media screen and (max-width: 800px) {
+  .grid-container {
+    display: inline-block;
+  }
+  .resume-left {
     text-align: center;
-}
-
-.amazon>.left, .sainsburys>.left {
-    display: inline-flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    width: 15%;
-    margin: 0 3% 0 0;
-}
-
-.sainsburys>.right {
-    margin: 0 10% 0 0;
-}
-
-.name-top-center {
+  }
+  .resume-left .resume-left__list {
+    margin: 0%;
+    display: inline-block;
+  }
+  .resume-left .resume-left__heading--hide {
     display: none;
+  }
+  .resume-right__heading--hide {
+    display: block;
+    font-weight: bold;
+  }
+  .experience__article--inline {
+    width: 25%;
+  }
+  .education__article--width {
+    margin: 0 0 0 3%;
+  }
 }
-
-@media screen and (max-width: 600px) {
-    .grid-container, .contact {
-        display: inline-block;
-    }
-    .contact {
-        margin: 0%;
-    }
-    .course>.right, .degree>.right {
-        margin: 0 0 0 3%;
-    }
-    .resume-about, .contact.title, .resume-image, .resume-left {
-        text-align: center;
-    }
-    .name {
-        display: none;
-    }
-    .name-top-center {
-        display: block;
-        font-weight: bold;
-    }
-    .left {
-        width: 25%;
-    }
-
-}
+/*# sourceMappingURL=styles.css.map */

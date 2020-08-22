@@ -1,0 +1,149 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-areas: 'left right';
+    grid-template-columns: 30% 70%;
+}
+
+.resume-left {
+    grid-area: left;
+    background-color: #0A66AD;
+    padding: 3% 3% 3% 5%;
+    color: ivory;
+
+    .resume-left__image {
+        display: block;
+        margin: auto;
+        border-radius: 50%;
+        max-width: 200px;
+        max-height: 200px;
+        width: auto;
+    }
+
+    .resume-left__heading {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 7% 0 1% 0;
+        width: auto;
+        background: #1B9AFA;
+    }
+
+    .resume-left__list {
+        display: flex;
+        justify-content: center;
+        text-justify: center;
+    }
+
+    .resume-left__heading--hide {
+        display: none;
+    }
+
+    .resume-left__article {
+        text-justify: center;
+    }
+
+    .resume-left__stack {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 5% 0 0 0;
+        justify-content: center;
+    }
+}
+
+
+
+.resume-right {
+    grid-area: right;
+    padding: 0 3%;
+
+    .education__article {
+        padding: 3% 0 0 0;
+
+        .education__article--flex {
+            display: flex;
+            flex-wrap: nowrap;
+            align-content: center;
+
+            .education__article--width {
+                width: 15%;
+            }            
+        }
+    }
+
+    .experience__article {
+        padding: 3% 0 0 0;
+
+        .experience__article--flex {
+            display: flex;
+            flex-wrap: nowrap;
+            align-content: center;
+
+            .experience__article--inline {
+                display: inline-flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                width: 15%;
+                margin: 0 3% 0 0;
+            }            
+        }
+    }
+
+    .skills__article {
+        padding: 3% 0 0 0;
+    }
+
+    .references__article {
+        padding: 3% 0 0 0;
+
+        .references__article--flex {
+            display: flex;
+            flex-wrap: nowrap;
+            align-content: center;
+
+            .references__article--width {
+                width: 50%;
+                text-align: center;
+            }       
+        }
+    }
+}
+
+
+@media screen and (max-width: 800px) {
+    .grid-container {
+        display: inline-block;
+    }
+   
+    .resume-left {
+        text-align: center;
+
+        .resume-left__list {
+            margin: 0%;
+            display: inline-block;
+        }
+        
+        .resume-left__heading--hide {
+            display: none;
+        }
+    }
+
+    .resume-right__heading--hide {
+        display: block;
+        font-weight: bold;
+    }
+
+    .experience__article--inline {
+        width: 25%;
+    }
+
+    .education__article--width {
+        margin: 0 0 0 3%;
+    }
+}
