@@ -34,6 +34,12 @@ body {
         background: #1B9AFA;
     }
 
+    .resume-left__heading--link {
+        color: ivory;
+        text-decoration: underline;
+        text-decoration-color: ivory;
+    }
+
     .resume-left__list {
         display: flex;
         justify-content: center;

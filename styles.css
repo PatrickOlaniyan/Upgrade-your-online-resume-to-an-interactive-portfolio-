@@ -45,6 +45,13 @@ body {
   background: #1B9AFA;
 }
 
+.resume-left .resume-left__heading--link {
+  color: ivory;
+  text-decoration: underline;
+  -webkit-text-decoration-color: ivory;
+          text-decoration-color: ivory;
+}
+
 .resume-left .resume-left__list {
   display: -webkit-box;
   display: -ms-flexbox;
